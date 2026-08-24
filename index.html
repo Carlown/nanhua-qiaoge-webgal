@@ -136,42 +136,47 @@
       }
 
     </style>
-    <!-- 标题菜单按钮：磨砂深色框（直接写死保证生效） -->
+    <!-- 标题菜单按钮：灰色磨砂斜角（与 game/userStyleSheet.css 保持一致的兜底） -->
     <style>
       [class*='_Title_buttonList_'] {
         padding-left: 96px !important;
         padding-top: 60px;
       }
-      [class*='_Title_buttonList_'] > *,
-      div[class$='_Title_button_1jbo0_8'] {
-        background: rgba(18, 18, 28, 0.48) !important;
-        -webkit-backdrop-filter: blur(12px) !important;
-        backdrop-filter: blur(12px) !important;
-        border: 2px solid rgba(255, 255, 255, 0.85) !important;
-        border-radius: 16px !important;
-        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35),
-          inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
-        transform: skew(0deg) !important;
-        padding: 0.55em 2.2em !important;
-        margin: 22px 0 !important;
-        transition: all 0.3s ease !important;
+      [class*='_Title_buttonList_'] > * {
+        background: rgba(165, 172, 184, 0.52) !important;
+        -webkit-backdrop-filter: blur(14px) saturate(135%) !important;
+        backdrop-filter: blur(14px) saturate(135%) !important;
+        border: 1px solid rgba(255, 255, 255, 0.32) !important;
+        border-radius: 4px !important;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35),
+          0 6px 20px rgba(0, 0, 0, 0.22) !important;
+        transform: skewX(-12deg) !important;
+        padding: 0.5em 2.6em !important;
+        margin: 16px 0 !important;
+        text-align: center !important;
+        transition: background 0.3s ease, border-color 0.3s ease,
+          box-shadow 0.3s ease, transform 0.3s ease !important;
         cursor: pointer;
       }
-      [class*='_Title_buttonList_'] > *:hover,
-      div[class$='_Title_button_1jbo0_8']:hover {
-        background: rgba(40, 34, 60, 0.62) !important;
-        border-color: #ffb3dd !important;
-        box-shadow: 0 4px 24px rgba(232, 95, 168, 0.45) !important;
-        padding: 0.55em 3em !important;
+      [class*='_Title_buttonList_'] > *:hover {
+        background: rgba(205, 212, 224, 0.68) !important;
+        border-color: rgba(255, 255, 255, 0.75) !important;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55),
+          0 8px 26px rgba(255, 255, 255, 0.22) !important;
+        transform: skewX(-12deg) translateY(-2px) !important;
       }
       [class*='_Title_buttonList_'] > *:nth-child(odd) { margin-left: 56px !important; }
+      [class*='_Title_button_text_']:not([class*='_outer']):not([class*='_inner']) {
+        transform: skewX(12deg) !important;
+        display: inline-block !important;
+      }
       [class*='_Title_button_text_'] {
         color: #ffffff !important;
         font-weight: 700 !important;
-        letter-spacing: 0.35em;
-        padding: 0 0.5em;
-        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
+        letter-spacing: 0.3em;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
       }
+      [class*='_Title_button_text_inner_'] { -webkit-text-stroke: 0 !important; }
     </style>
     <script type="module" crossorigin src="./assets/index-R1tKotR6.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-Dch1g2w9.css">

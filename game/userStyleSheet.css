@@ -1,78 +1,90 @@
 /* ══════════════════════════════════════════════════
    《南瓜乔哥的悲惨生活》 全局样式覆盖
-   ── 标题主菜单按钮 · 磨砂毛玻璃边框效果 ──
+   ── 标题主菜单按钮 · 灰色磨砂毛玻璃斜角效果 ──
    兼容：打包后类名被哈希成 _Title_button_xxx，属性选择器兜底
    ══════════════════════════════════════════════════ */
 
-/* ── 基础磨砂态 ── */
-.Title_button,
-[class*="Title_button"]:not([class*="Title_button_text"]):not([class*="Title_buttonList"]) {
-  /* 半透明白色底 + 毛玻璃模糊（-webkit- 前缀兼容移动端 WebView） */
-  background-color: rgba(255, 255, 255, 0.10) !important;
-  -webkit-backdrop-filter: blur(12px) saturate(160%);
-  backdrop-filter: blur(12px) saturate(160%);
+/* 按钮本体：灰色半透磨砂 + 平行四边形斜切 */
+[class*='Title_button']:not([class*='Title_button_text']):not([class*='Title_buttonList']) {
+  /* 灰色半透底 + 毛玻璃模糊（-webkit- 前缀兼容移动端 WebView） */
+  background: rgba(165, 172, 184, 0.52) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(135%) !important;
+  backdrop-filter: blur(14px) saturate(135%) !important;
 
-  /* 半透明白色细磨砂边框 + 圆角 */
-  border: 1px solid rgba(255, 255, 255, 0.38) !important;
-  border-radius: 14px !important;
+  /* 细亮边 + 微圆角（斜切后视觉接近直角） */
+  border: 1px solid rgba(255, 255, 255, 0.32) !important;
+  border-radius: 4px !important;
 
-  /* 上缘高光 + 底部投影，玻璃浮起感 */
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22),
-              0 8px 24px rgba(0, 0, 0, 0.16) !important;
+  /* 上缘内高光 + 底部投影，玻璃浮起感 */
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35),
+              0 6px 20px rgba(0, 0, 0, 0.22) !important;
 
-  /* 让玻璃框包住文字，视觉更饱满 */
-  padding: 0.7em 1.6em !important;
+  /* 平行四边形斜切（负角度：左下角外伸、右上角外伸） */
+  transform: skewX(-12deg) !important;
+
+  /* 文字居中、留白让玻璃框饱满 */
+  padding: 0.5em 2.6em !important;
+  margin: 16px 0 !important;
   text-align: center !important;
+  box-sizing: border-box !important;
 
-  /* 过渡动画（transform 保留模板自带的悬浮上浮效果） */
-  transition: transform 0.25s ease,
+  /* 过渡动画 */
+  transition: background 0.3s ease,
               border-color 0.3s ease,
-              background-color 0.3s ease,
-              box-shadow 0.3s ease;
+              box-shadow 0.3s ease,
+              transform 0.3s ease !important;
 
   cursor: pointer;
 }
 
-/* ── 悬浮态：边框亮度变高、整体提亮 ── */
-.Title_button:hover,
-[class*="Title_button"]:not([class*="Title_button_text"]):not([class*="Title_buttonList"]):hover {
-  border-color: rgba(255, 255, 255, 0.92) !important;
-  background-color: rgba(255, 255, 255, 0.20) !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38),
-              0 6px 22px rgba(255, 255, 255, 0.22) !important;
+/* 悬浮：边框变亮、整体提白、微微上浮 */
+[class*='Title_button']:not([class*='Title_button_text']):not([class*='Title_buttonList']):hover {
+  background: rgba(205, 212, 224, 0.68) !important;
+  border-color: rgba(255, 255, 255, 0.75) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55),
+              0 8px 26px rgba(255, 255, 255, 0.22) !important;
+  transform: skewX(-12deg) translateY(-2px) !important;
 }
 
-/* ── 老设备兼容：不支持 backdrop-filter 的安卓 WebView
-      毛玻璃属性被直接忽略（不报错），这里检测后
-      退化成深色半透按钮，保证白字可读 ── */
+/* 文字容器：反向斜切 12° 保持正立 */
+[class*='_Title_button_text_']:not([class*='_outer']):not([class*='_inner']) {
+  transform: skewX(12deg) !important;
+  display: inline-block !important;
+}
+
+/* 按钮文字：白色粗体，带投影保证在灰底上可读 */
+[class*='_Title_button_text_'] {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.3em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+/* 去掉引擎默认的深色描边，让文字干净纯白 */
+[class*='_Title_button_text_inner_'] {
+  -webkit-text-stroke: 0 !important;
+}
+
+/* 禁用态（如无存档时）：保留磨砂斜角但整体变暗 */
+[class*='Title_button_disabled'] {
+  opacity: 0.42 !important;
+  cursor: not-allowed !important;
+}
+
+/* 老设备兼容：不支持 backdrop-filter 的安卓 WebView，
+   毛玻璃属性被直接忽略（不报错），这里检测后加深底色
+   保证白字可读，形状/斜角/边框依然保留 */
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .Title_button,
-  [class*="Title_button"]:not([class*="Title_button_text"]):not([class*="Title_buttonList"]) {
-    background-color: rgba(16, 20, 32, 0.72) !important;
+  [class*='Title_button']:not([class*='Title_button_text']):not([class*='Title_buttonList']) {
+    background: rgba(70, 76, 88, 0.78) !important;
   }
 }
 
-/* 禁用态（如无存档时）：保留磨砂但整体变暗 */
-[class*="Title_button_disabled"] {
-  opacity: 0.45;
-  cursor: not-allowed;
-}
-
-/* ── 按钮文字：白色粗体，带投影保证可读 ── */
-[class*="_Title_button_text_"] {
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.35em;
-  padding: 0 0.5em;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
-}
-
 /* ── 按钮列表位置与锯齿错位排列 ── */
-[class*="_Title_buttonList_"] {
+[class*='_Title_buttonList_'] {
   padding-left: 96px !important;
   padding-top: 60px;
 }
-[class*="_Title_buttonList_"] > *:nth-child(odd) {
+[class*='_Title_buttonList_'] > *:nth-child(odd) {
   margin-left: 56px !important;
 }
 
