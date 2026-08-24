@@ -1,0 +1,15 @@
+; 第二章 · 三十九岁
+pixiInit;
+intro:第二章|三十九岁;
+changeBg:bg_eat1.jpg -next;
+我39岁了，找不到老婆。 -story/s06.mp3;
+changeBg:bg_eat2.jpg -next;
+每天一个人生活。 -story/s07.mp3;
+changeBg:bg_talk.jpg -next;
+pixiPerform:rain;
+我每天面对的这个空房子发呆。 -story/s08.mp3;
+因为没有老婆，一个人待在这个租房里面。 -story/s09.mp3;
+每天就是对着这个租房子发呆。 -story/s10.mp3;
+冷冷清清的。 -story/s11.mp3;
+pixiInit;
+changeScene:ch4_hope.txt;

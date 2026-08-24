@@ -1,0 +1,20 @@
+; 尾声
+intro:尾声;
+changeBg:bg_talk.jpg -next;
+找一个好的女人—— -story/s19.mp3;
+难找。 -story/s20.mp3;
+打光棍这么多年了。 -story/s21.mp3;
+太难了。 -story/s22.mp3;
+changeBg:bg_bowl.jpg -next;
+夜深了。关掉灯，房间里只剩下窗外的声音。;
+明天太阳照常升起。饭照常要做，碗照常要洗，日子照常要过。;
+——《南瓜乔哥的悲惨生活》，完——;
+choose:再看一遍原始视频:replay|回到标题:quit;
+
+label:replay;
+下面，就是乔哥的原始视频。;
+playVideo:intro.mp4;
+end;
+
+label:quit;
+end;

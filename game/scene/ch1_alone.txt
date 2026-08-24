@@ -1,0 +1,10 @@
+; 序章 · 一个人生活
+changeBg:bg_talk.jpg -next;
+bgm:bgm_kitchen.mp3 -volume=30 -enter=3000;
+intro:序章|一个人生活;
+我是一个光棍。没有房贷，没有车贷，没有老婆，没有后代。 -story/s01.mp3;
+changeBg:bg_stove.jpg -next;
+不出意外的话，我家以后再也没人了。 -story/s02.mp3;
+changeBg:bg_talk.jpg -next;
+因为没有老婆，一个人生活。 -story/s03.mp3;
+changeScene:ch2_cooking.txt;

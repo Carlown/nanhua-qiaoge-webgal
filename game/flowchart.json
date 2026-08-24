@@ -1,0 +1,73 @@
+{
+  "flowcharts": [
+    {
+      "id": "main",
+      "name": "39岁，一个人生活",
+      "type": "main",
+      "nodes": [
+        {
+          "id": "start",
+          "type": "root",
+          "position": { "x": 250, "y": 0 },
+          "data": {
+            "label": "序章入口",
+            "sceneName": "start.txt",
+            "isRoot": true
+          }
+        },
+        {
+          "id": "ch1",
+          "type": "chapter",
+          "position": { "x": 0, "y": 120 },
+          "data": {
+            "label": "序章 · 一个人生活",
+            "sceneName": "ch1_alone.txt"
+          }
+        },
+        {
+          "id": "ch2",
+          "type": "chapter",
+          "position": { "x": 240, "y": 120 },
+          "data": {
+            "label": "第一章 · 一个人的晚饭",
+            "sceneName": "ch2_cooking.txt"
+          }
+        },
+        {
+          "id": "ch3",
+          "type": "chapter",
+          "position": { "x": 480, "y": 120 },
+          "data": {
+            "label": "第二章 · 三十九岁",
+            "sceneName": "ch3_39.txt"
+          }
+        },
+        {
+          "id": "ch4",
+          "type": "chapter",
+          "position": { "x": 720, "y": 120 },
+          "data": {
+            "label": "第三章 · 希望",
+            "sceneName": "ch4_hope.txt"
+          }
+        },
+        {
+          "id": "ch5",
+          "type": "chapter",
+          "position": { "x": 960, "y": 120 },
+          "data": {
+            "label": "尾声",
+            "sceneName": "ch5_end.txt"
+          }
+        }
+      ],
+      "edges": [
+        { "id": "e-start-ch1", "source": "start", "target": "ch1" },
+        { "id": "e-ch1-ch2", "source": "ch1", "target": "ch2" },
+        { "id": "e-ch2-ch3", "source": "ch2", "target": "ch3" },
+        { "id": "e-ch3-ch4", "source": "ch3", "target": "ch4" },
+        { "id": "e-ch4-ch5", "source": "ch4", "target": "ch5" }
+      ]
+    }
+  ]
+}

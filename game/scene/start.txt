@@ -1,0 +1,2 @@
+;《南瓜乔哥的悲惨生活》 入口
+changeScene:ch1_alone.txt;

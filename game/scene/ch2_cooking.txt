@@ -1,0 +1,18 @@
+; 第一章 · 一个人的晚饭
+intro:第一章|一个人的晚饭;
+changeBg:bg_garlic.jpg -next;
+今天，就找一个瓜来吃。 -story/s04.mp3;
+今天吃素菜。 -story/s05.mp3;
+changeBg:bg_cutting.jpg -next;
+洗菜，切菜，拍两瓣蒜。;
+案板笃笃地响，屋子里有了一点动静。;
+changeBg:bg_fry.jpg -next;
+锅热了，油冒烟，菜下锅——哗啦一声。;
+changeBg:bg_wok.jpg -next;
+颠两下勺，火苗蹿上来，映在瓷砖上。;
+changeBg:bg_rice.jpg -next;
+米饭也焖上了。;
+一个人的米量，量了多少年，从来不会错。;
+changeBg:bg_bowl.jpg -next;
+盛出来。一碗，一双筷子。;
+changeScene:ch3_39.txt;

@@ -1,0 +1,15 @@
+# 开发临时文件
+_dev/
+_server.py
+
+# 引擎原版压缩包（可从官网重新下载）
+WebGAL-4.6.4-web.zip
+
+# 原始素材备份
+doubao_image_1.png
+ZiHun144Hao-LangYuanTi-2.ttf
+doubao_image_3 (1)_64x64.ico
+
+# 系统文件
+Thumbs.db
+Desktop.ini
