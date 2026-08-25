@@ -1,18 +1,24 @@
 ; 第一章 · 一个人的晚饭
 intro:第一章|一个人的晚饭;
 changeBg:bg_garlic.jpg -next;
-今天，就找一个瓜来吃。 -story/s04.mp3;
-今天吃素菜。 -story/s05.mp3;
+unlockCg:bg_garlic.jpg -name=今日食材 -series=生活记录 -order=3;
+今天，就炒一个苦瓜来吃。 -story/s04.mp3;
+今天吃素菜，没有肉。 -story/s05.mp3;
 changeBg:bg_cutting.jpg -next;
+unlockCg:bg_cutting.jpg -name=洗菜切菜 -series=生活记录 -order=4;
 洗菜，切菜，拍两瓣蒜。;
 案板笃笃地响，屋子里有了一点动静。;
 changeBg:bg_fry.jpg -next;
+unlockCg:bg_fry.jpg -name=下锅 -series=生活记录 -order=5;
 锅热了，油冒烟，菜下锅——哗啦一声。;
 changeBg:bg_wok.jpg -next;
+unlockCg:bg_wok.jpg -name=颠勺 -series=生活记录 -order=6;
 颠两下勺，火苗蹿上来，映在瓷砖上。;
 changeBg:bg_rice.jpg -next;
+unlockCg:bg_rice.jpg -name=焖饭 -series=生活记录 -order=7;
 米饭也焖上了。;
 一个人的米量，量了多少年，从来不会错。;
 changeBg:bg_bowl.jpg -next;
+unlockCg:bg_bowl.jpg -name=一碗·一双筷子 -series=生活记录 -order=8;
 盛出来。一碗，一双筷子。;
 changeScene:ch3_39.txt;

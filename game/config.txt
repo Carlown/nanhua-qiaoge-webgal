@@ -3,7 +3,7 @@ Game_key:0f87dstRg;
 Title_img:title_bg_v2.jpg;
 Title_bgm:s_Title.mp3;
 Game_Logo:none;
-Enable_Appreciation:false;
+Enable_Appreciation:true;
 Enable_Continue:true;
 Enable_flowchart:true;
 Default_Language:zh_CN;

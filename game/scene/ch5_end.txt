@@ -1,11 +1,13 @@
 ; 尾声
 intro:尾声;
 changeBg:bg_talk.jpg -next;
+unlockCg:bg_talk.jpg -name=客厅·自言自语 -series=生活记录 -order=1;
 找一个好的女人—— -story/s19.mp3;
 难找。 -story/s20.mp3;
 打光棍这么多年了。 -story/s21.mp3;
 太难了。 -story/s22.mp3;
 changeBg:bg_bowl.jpg -next;
+unlockCg:bg_bowl.jpg -name=一碗·一双筷子 -series=生活记录 -order=8;
 夜深了。关掉灯，房间里只剩下窗外的声音。;
 明天太阳照常升起。饭照常要做，碗照常要洗，日子照常要过。;
 ——《南瓜乔哥的悲惨生活》，完——;
